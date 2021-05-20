@@ -32,7 +32,7 @@ textarea{
 
 .row {
   white-space: pre-wrap;
-  height: 80px;
+  height: 70px;
   border-top: 1px solid white;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -40,10 +40,6 @@ textarea{
   margin-right: -15px;
   margin-left: -15px;
   border-bottom:1px solid black;
-}
-
-.container {
-    
 }
 
 .hour {
@@ -81,55 +77,13 @@ textarea{
 }
 
 .col-8 {
-    border: 1px solid #999;
-    padding: 0.5rem;
-}
-
-.now10 {
-    border: 1px solid #999;
-    padding: 0.5rem;
+  border: 1px solid #999;
+  padding: 0.5rem;
+  height: 70px;
 }
 
 
-.timestart-11 {
-    border: 1px solid #999;
-    padding: 0.5rem;
-}
 
 
-.timestart-12 {
-    border: 1px solid #999;
-    padding: 0.5rem;
-}
-
-
-.timestart-1 {
-    border: 1px solid #999;
-    padding: 0.5rem;
-}
-
-
-.timestart-2 {
-    border: 1px solid #999;
-    padding: 0.5rem;
-}
-
-
-.timestart-3 {
-    border: 1px solid #999;
-    padding: 0.5rem;
-}
-
-
-.timestart-4 {
-    border: 1px solid #999;
-    padding: 0.5rem;
-}
-
-
-.timestart-5 {
-    border: 1px solid #999;
-    padding: 0.5rem;
-}
 
 
