@@ -39,6 +39,11 @@ textarea{
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  border-bottom:1px solid black;
+}
+
+.container {
+    
 }
 
 .hour {
@@ -75,12 +80,12 @@ textarea{
   transition: all .3s ease-in-out;
 }
 
-.timestart-9 {
+.col-8 {
     border: 1px solid #999;
     padding: 0.5rem;
 }
 
-.timestart-10 {
+.now10 {
     border: 1px solid #999;
     padding: 0.5rem;
 }
