@@ -10,5 +10,61 @@ $("#save").on("click", function(event){
     console.log(event)
 });
 
+function theTimeTracker() {
+    const theTime = moment().hour();
+
+    // loop over time blocks
+    $(".timeblock").each(function () {
+        var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+
+        // To check the time and add the classes for background indicators
+        if (blockTime < theTime) {
+            $(this).removeClass("future");
+            $(this).removeClass("present");
+            $(this).addClass("past");
+        }
+        else if (blockTime === theTime) {
+            $(this).removeClass("past");
+            $(this).removeClass("future");
+            $(this).addClass("present");
+        }
+        else {
+            $(this).removeClass("present");
+            $(this).removeClass("past");
+            $(this).addClass("future");
+
+        }
+    })
+}
+
+$("#now9 .description").val(localStorage.getItem("now9"));
+$("#now10 .description").val(localStorage.getItem("now10"));
+$("#now11 .description").val(localStorage.getItem("now11"));
+$("#now12 .description").val(localStorage.getItem("now12"));
+$("#now1 .description").val(localStorage.getItem("now1"));
+$("#now2 .description").val(localStorage.getItem("now2"));
+$("#now3 .description").val(localStorage.getItem("now3"));
+$("#now4 .description").val(localStorage.getItem("now4"));
+$("#now5 .description").val(localStorage.getItem("now5"));
+
+theTimeTracker();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //add event input
 //save event input to local storage

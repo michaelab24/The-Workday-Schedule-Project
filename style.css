@@ -39,7 +39,6 @@ textarea{
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
-  border-bottom:1px solid black;
 }
 
 .hour {
@@ -65,8 +64,10 @@ textarea{
 
 .saveBtn {
   border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom:1px solid whitesmoke ;
+  height: 70px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   background-color: #06AED5;
   color: white;
 }
@@ -82,7 +83,12 @@ textarea{
   height: 70px;
 }
 
-
+.col-2 {
+  border-top: 1px dashed black;
+  padding: 20px;
+  width: 100px;
+  height: 70px;
+}
 
 
 
