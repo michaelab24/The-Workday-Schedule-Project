@@ -4,18 +4,31 @@ $(document).ready(function(){
     $("#currentDay").append(displayDate)
 })
 
-$("#save").on("click", function(event){
-    event.preventDefault();
+//$("#save").on("click", function(event){
+ //   event.preventDefault();
 
-    console.log(event)
-});
+//    console.log(event)
+//});
+
+$(document).ready(function () {
+    $(".btn").on("click", function (event) {
+      event.preventDefault();
+  
+      var toDoEntry = $(this).closest("div.row").find("textarea[class='col-8']").val();
+  
+      localStorage.setItem("userEntry", JSON.stringify(toDoEntry))
+  
+      console.log(toDoEntry)
+    });
+  
+
 
 function theTimeTracker() {
     const theTime = moment().hour();
 
     // loop over time blocks
-    $(".timeblock").each(function () {
-        var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+    $(".time-block").each(function () {
+        var blockTime = parseInt($(this).attr("id").split(".hour")[1]);
 
         // To check the time and add the classes for background indicators
         if (blockTime < theTime) {
@@ -35,7 +48,8 @@ function theTimeTracker() {
 
         }
     })
-}
+};
+
 
 $("#now9 .description").val(localStorage.getItem("now9"));
 $("#now10 .description").val(localStorage.getItem("now10"));
@@ -48,8 +62,7 @@ $("#now4 .description").val(localStorage.getItem("now4"));
 $("#now5 .description").val(localStorage.getItem("now5"));
 
 theTimeTracker();
-
-
+})
 
 
 
@@ -67,4 +80,4 @@ theTimeTracker();
 
 
 //add event input
-//save event input to local storage
+//save event input to local 
