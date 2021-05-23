@@ -12,11 +12,13 @@ $(document).ready(function(){
 
 $(document).ready(function () {
     $(".btn").on("click", function (event) {
-      event.preventDefault();
+      //event.preventDefault();
   
-      var toDoEntry = $(this).closest("div.row").find("textarea[class='col-8']").val();
-  
-      localStorage.setItem("userEntry", JSON.stringify(toDoEntry))
+      var toDoEntry = $(this).closest("div.row").find("textarea[class='col-8 description']").val();
+      var time = $(this).parent().attr("id");
+      localStorage.setItem(time, JSON.stringify(toDoEntry))
+    
+      console.log(time)
   
       console.log(toDoEntry)
     });
@@ -24,12 +26,13 @@ $(document).ready(function () {
 
 
 function theTimeTracker() {
-    const theTime = moment().hour();
+    var theTime = moment().hour();
 
     // loop over time blocks
     $(".time-block").each(function () {
-        var blockTime = parseInt($(this).attr("id").split(".hour")[1]);
-
+        var blockTime = parseInt($(this).attr("id").split("now")[1]);
+        blockTime = blockTime + 12
+        
         // To check the time and add the classes for background indicators
         if (blockTime < theTime) {
             $(this).removeClass("future");
