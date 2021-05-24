@@ -31,8 +31,8 @@ function theTimeTracker() {
     // loop over time blocks
     $(".time-block").each(function () {
         var blockTime = parseInt($(this).attr("id").split("now")[1]);
-        blockTime = blockTime + 12
         
+
         // To check the time and add the classes for background indicators
         if (blockTime < theTime) {
             $(this).removeClass("future");
@@ -58,11 +58,11 @@ $("#now9 .description").val(localStorage.getItem("now9"));
 $("#now10 .description").val(localStorage.getItem("now10"));
 $("#now11 .description").val(localStorage.getItem("now11"));
 $("#now12 .description").val(localStorage.getItem("now12"));
-$("#now1 .description").val(localStorage.getItem("now1"));
-$("#now2 .description").val(localStorage.getItem("now2"));
-$("#now3 .description").val(localStorage.getItem("now3"));
-$("#now4 .description").val(localStorage.getItem("now4"));
-$("#now5 .description").val(localStorage.getItem("now5"));
+$("#now13 .description").val(localStorage.getItem("now13"));
+$("#now14 .description").val(localStorage.getItem("now14"));
+$("#now15 .description").val(localStorage.getItem("now15"));
+$("#now16 .description").val(localStorage.getItem("now16"));
+$("#now17 .description").val(localStorage.getItem("now17"));
 
 theTimeTracker();
 })
