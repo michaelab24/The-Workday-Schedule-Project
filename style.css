@@ -53,12 +53,12 @@ textarea{
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #880700;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #00f13c;
   color: white;
 }
 
@@ -78,7 +78,7 @@ textarea{
 }
 
 .col-8 {
-  border: 1px solid #999;
+  border: 1px solid #cfcfcf;
   padding: 0.5rem;
   height: 70px;
 }
